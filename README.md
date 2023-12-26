@@ -20,12 +20,12 @@ function addPerson(string memory _name, uint256 _favoriteNumber) public {
     }
 ```
 ### Deploy
-forge create SimpleStorage --private-key <PRIVATE_KEY> --rpc-url <ALCHEMY_URL>
+```forge create SimpleStorage --private-key <PRIVATE_KEY> --rpc-url <ALCHEMY_URL>```
 
-REPLACE PRIVATE KEY WITH YOUR KEY AND THE ALCHEMY RPC URL
+-REPLACE PRIVATE KEY WITH YOUR KEY AND THE ALCHEMY RPC URL
 
-THANKS
+-THANKS
 
-FEEL FREE TO MODIFY THE CODE
+--FEEL FREE TO MODIFY THE CODE
 
 author:clowwnFace
