@@ -1,66 +1,31 @@
-## Foundry
+# My First Solidity Smart Contract: SimpleStorage
 
-**Foundry is a blazing fast, portable and modular toolkit for Ethereum application development written in Rust.**
+I'm proud to present my first Solidity smart contract, crafted using Solidity and Foundry. This simple yet impactful contract allows users to store and retrieve their favorite numbers on the blockchain, along with the option to add persons to the contract.
 
-Foundry consists of:
+## Contract Functions
 
--   **Forge**: Ethereum testing framework (like Truffle, Hardhat and DappTools).
--   **Cast**: Swiss army knife for interacting with EVM smart contracts, sending transactions and getting chain data.
--   **Anvil**: Local Ethereum node, akin to Ganache, Hardhat Network.
--   **Chisel**: Fast, utilitarian, and verbose solidity REPL.
+### Store Function
+```solidity
+function store(uint256 _favoriteNumber) public {
+    myFavoriteNumber = _favoriteNumber;
+}
 
-## Documentation
+function retrieve() public view returns (uint256) {
+    return myFavoriteNumber;
+}
 
-https://book.getfoundry.sh/
-
-## Usage
-
-### Build
-
-```shell
-$ forge build
-```
-
-### Test
-
-```shell
-$ forge test
-```
-
-### Format
-
-```shell
-$ forge fmt
-```
-
-### Gas Snapshots
-
-```shell
-$ forge snapshot
-```
-
-### Anvil
-
-```shell
-$ anvil
-```
+function addPerson(string memory _name, uint256 _favoriteNumber) public {
+        listOfPeople.push(Person(_favoriteNumber, _name));
+        nameToFavoriteNumber[_name] = _favoriteNumber;
+    }
 
 ### Deploy
+forge create SimpleStorage --private-key <PRIVATE_KEY> --rpc-url <ALCHEMY_URL>
 
-```shell
-$ forge script script/Counter.s.sol:CounterScript --rpc-url <your_rpc_url> --private-key <your_private_key>
-```
+REPLACE PRIVATE KEY WITH YOUR KEY AND THE ALCHEMY RPC URL
 
-### Cast
+THANKS
 
-```shell
-$ cast <subcommand>
-```
+FEEL FREE TO MODIFY THE CODE
 
-### Help
-
-```shell
-$ forge --help
-$ anvil --help
-$ cast --help
-```
+author:clowwnFace
