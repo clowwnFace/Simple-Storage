@@ -4,7 +4,7 @@ I'm proud to present my first Solidity smart contract, crafted using Solidity an
 
 ## Contract Functions
 
-### Store Function
+
 ```solidity
 function store(uint256 _favoriteNumber) public {
     myFavoriteNumber = _favoriteNumber;
